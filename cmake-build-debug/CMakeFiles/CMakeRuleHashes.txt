@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+4c02c4641c14681e0136649ea99873fd moc_activity.cpp
+aecb57971545e4bbfdfa2b86a2b3ab00 moc_mainwindow.cpp
+ff4b0b424a2ee23f9b55c58ef683bac0 moc_register.cpp
+c4d2a2d51d280cd0dd131a5344689802 ui_mainwindow.h

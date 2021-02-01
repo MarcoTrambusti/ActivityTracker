@@ -1,0 +1,5 @@
+-I/home/marco/ActivityTracker
+-I/home/marco/ActivityTracker/cmake-build-debug
+-o
+/home/marco/ActivityTracker/cmake-build-debug/moc_activity.cpp
+/home/marco/ActivityTracker/activity.h
