@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>790</width>
-    <height>642</height>
+    <width>972</width>
+    <height>652</height>
    </rect>
   </property>
   <property name="palette">
@@ -475,9 +475,9 @@
              <colorrole role="WindowText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>176</red>
-                <green>176</green>
-                <blue>176</blue>
+                <red>130</red>
+                <green>130</green>
+                <blue>130</blue>
                </color>
               </brush>
              </colorrole>
@@ -493,9 +493,9 @@
              <colorrole role="HighlightedText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>145</red>
-                <green>145</green>
-                <blue>145</blue>
+                <red>61</red>
+                <green>61</green>
+                <blue>61</blue>
                </color>
               </brush>
              </colorrole>
@@ -504,9 +504,9 @@
              <colorrole role="WindowText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>176</red>
-                <green>176</green>
-                <blue>176</blue>
+                <red>130</red>
+                <green>130</green>
+                <blue>130</blue>
                </color>
               </brush>
              </colorrole>
@@ -522,9 +522,9 @@
              <colorrole role="HighlightedText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>145</red>
-                <green>145</green>
-                <blue>145</blue>
+                <red>61</red>
+                <green>61</green>
+                <blue>61</blue>
                </color>
               </brush>
              </colorrole>
@@ -551,9 +551,9 @@
              <colorrole role="HighlightedText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>145</red>
-                <green>145</green>
-                <blue>145</blue>
+                <red>61</red>
+                <green>61</green>
+                <blue>61</blue>
                </color>
               </brush>
              </colorrole>
@@ -593,13 +593,72 @@
          </widget>
         </item>
         <item>
-         <widget class="QListWidget" name="listWidget">
-          <property name="font">
-           <font>
-            <family>Sans Serif</family>
-            <pointsize>12</pointsize>
-           </font>
+         <widget class="QTableWidget" name="tableWidget">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
           </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="showGrid">
+           <bool>true</bool>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderHighlightSections">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderHighlightSections">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderStretchLastSection">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>time</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>description</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+          </column>
          </widget>
         </item>
        </layout>
@@ -616,7 +675,7 @@
         <item>
          <widget class="QLabel" name="label_start">
           <property name="text">
-           <string>inizio:</string>
+           <string>start:</string>
           </property>
          </widget>
         </item>
@@ -626,7 +685,7 @@
         <item>
          <widget class="QLabel" name="label_end">
           <property name="text">
-           <string>fine:</string>
+           <string>end:</string>
           </property>
          </widget>
         </item>
@@ -643,6 +702,16 @@
           </property>
           <property name="flat">
            <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="modButton">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Modify</string>
           </property>
          </widget>
         </item>
@@ -673,7 +742,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>790</width>
+     <width>972</width>
      <height>20</height>
     </rect>
    </property>

@@ -22,3 +22,4 @@ HEADERS  += mainwindow.h \
     activity.h
 
 FORMS    += mainwindow.ui
+

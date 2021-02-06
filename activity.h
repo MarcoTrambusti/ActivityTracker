@@ -20,12 +20,12 @@ public:
         date=d;
     }
 
-    const QTime &getStart() const {
+    const QTime &getStartTime() const {
         return start;
     }
 
-    void setStart(const QTime &start) {
-        Activity::start = start;
+    void setStartTime(const QTime &StartTime) {
+       start = StartTime;
     }
 
     const QTime &getEndTime() const {

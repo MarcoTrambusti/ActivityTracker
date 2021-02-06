@@ -11,6 +11,8 @@ QString
 -
 QDate
 -
+utility
+-
 
 /home/marco/ActivityTracker/mainwindow.cpp
 mainwindow.h

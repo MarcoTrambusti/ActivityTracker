@@ -694,6 +694,9 @@ moc_mainwindow.cpp: ../Qt5.7.0/5.7/gcc_64/include/QtWidgets/QMainWindow \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qstyle.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/QTableWidgetItem \
+		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtablewidget.h \
+		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtableview.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtCore/QFile \
 		register.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtCore/QList \
@@ -846,6 +849,9 @@ main.o: main.cpp mainwindow.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qstyle.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/QTableWidgetItem \
+		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtablewidget.h \
+		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtableview.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtCore/QFile \
 		register.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtCore/QList \
@@ -984,6 +990,9 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qstyle.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/QTableWidgetItem \
+		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtablewidget.h \
+		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtableview.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtCore/QFile \
 		register.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtCore/QList \
@@ -1023,7 +1032,6 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
-		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/QListWidget \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/QMenuBar \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qmenubar.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qmenu.h \
@@ -1031,6 +1039,7 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/QStatusBar \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qstatusbar.h \
+		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/QTableWidget \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/QTimeEdit \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/QToolBar \
 		../Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtoolbar.h \

@@ -14,13 +14,14 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDateEdit>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTimeEdit>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
@@ -36,7 +37,7 @@ public:
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QDateEdit *dateEdit;
-    QListWidget *listWidget;
+    QTableWidget *tableWidget;
     QHBoxLayout *horizontalLayout;
     QLineEdit *lineEdit;
     QLabel *label_start;
@@ -44,6 +45,7 @@ public:
     QLabel *label_end;
     QTimeEdit *timeEdit_end;
     QPushButton *pushButton;
+    QPushButton *modButton;
     QPushButton *delButton;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
@@ -54,7 +56,7 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->setEnabled(true);
-        MainWindow->resize(790, 642);
+        MainWindow->resize(972, 652);
         QPalette palette;
         QBrush brush(QColor(255, 255, 255, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -137,13 +139,13 @@ public:
         dateEdit = new QDateEdit(centralWidget);
         dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
         QPalette palette1;
-        QBrush brush8(QColor(176, 176, 176, 255));
+        QBrush brush8(QColor(130, 130, 130, 255));
         brush8.setStyle(Qt::SolidPattern);
         palette1.setBrush(QPalette::Active, QPalette::WindowText, brush8);
         QBrush brush9(QColor(217, 217, 217, 255));
         brush9.setStyle(Qt::SolidPattern);
         palette1.setBrush(QPalette::Active, QPalette::Highlight, brush9);
-        QBrush brush10(QColor(145, 145, 145, 255));
+        QBrush brush10(QColor(61, 61, 61, 255));
         brush10.setStyle(Qt::SolidPattern);
         palette1.setBrush(QPalette::Active, QPalette::HighlightedText, brush10);
         palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush8);
@@ -167,14 +169,33 @@ public:
 
         verticalLayout->addWidget(dateEdit);
 
-        listWidget = new QListWidget(centralWidget);
-        listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("Sans Serif"));
-        font1.setPointSize(12);
-        listWidget->setFont(font1);
+        tableWidget = new QTableWidget(centralWidget);
+        if (tableWidget->columnCount() < 2)
+            tableWidget->setColumnCount(2);
+        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        __qtablewidgetitem->setTextAlignment(Qt::AlignCenter);
+        __qtablewidgetitem->setFont(font);
+        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
+        __qtablewidgetitem1->setFont(font);
+        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
+        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
+        tableWidget->setLayoutDirection(Qt::LeftToRight);
+        tableWidget->setAutoFillBackground(false);
+        tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
+        tableWidget->setShowGrid(true);
+        tableWidget->setSortingEnabled(true);
+        tableWidget->horizontalHeader()->setVisible(true);
+        tableWidget->horizontalHeader()->setCascadingSectionResizes(false);
+        tableWidget->horizontalHeader()->setHighlightSections(true);
+        tableWidget->horizontalHeader()->setStretchLastSection(true);
+        tableWidget->verticalHeader()->setVisible(false);
+        tableWidget->verticalHeader()->setCascadingSectionResizes(true);
+        tableWidget->verticalHeader()->setHighlightSections(false);
+        tableWidget->verticalHeader()->setStretchLastSection(false);
 
-        verticalLayout->addWidget(listWidget);
+        verticalLayout->addWidget(tableWidget);
 
 
         verticalLayout_2->addLayout(verticalLayout);
@@ -214,6 +235,12 @@ public:
 
         horizontalLayout->addWidget(pushButton);
 
+        modButton = new QPushButton(centralWidget);
+        modButton->setObjectName(QString::fromUtf8("modButton"));
+        modButton->setEnabled(false);
+
+        horizontalLayout->addWidget(modButton);
+
         delButton = new QPushButton(centralWidget);
         delButton->setObjectName(QString::fromUtf8("delButton"));
         delButton->setEnabled(false);
@@ -230,7 +257,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 790, 20));
+        menuBar->setGeometry(QRect(0, 0, 972, 20));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -248,12 +275,17 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Activity Register", nullptr));
         dateEdit->setDisplayFormat(QApplication::translate("MainWindow", "dd/MM/yyyy", nullptr));
-        label_start->setText(QApplication::translate("MainWindow", "inizio:", nullptr));
-        label_end->setText(QApplication::translate("MainWindow", "fine:", nullptr));
+        QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
+        ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "time", nullptr));
+        QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
+        ___qtablewidgetitem1->setText(QApplication::translate("MainWindow", "description", nullptr));
+        label_start->setText(QApplication::translate("MainWindow", "start:", nullptr));
+        label_end->setText(QApplication::translate("MainWindow", "end:", nullptr));
         pushButton->setText(QApplication::translate("MainWindow", "+", nullptr));
 #ifndef QT_NO_SHORTCUT
         pushButton->setShortcut(QApplication::translate("MainWindow", "Return", nullptr));
 #endif // QT_NO_SHORTCUT
+        modButton->setText(QApplication::translate("MainWindow", "Modify", nullptr));
         delButton->setText(QApplication::translate("MainWindow", "Delete", nullptr));
 #ifndef QT_NO_SHORTCUT
         delButton->setShortcut(QApplication::translate("MainWindow", "Backspace", nullptr));
