@@ -52,6 +52,10 @@ Activity *Register::find(const QString& a, const QDate& d,const QString& s, cons
     return nullptr;
 }
 
+const QList<Activity *> &Register::getActivitylist() const {
+    return Activitylist;
+}
+
 
 
 

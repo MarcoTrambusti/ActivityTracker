@@ -205,6 +205,7 @@ HelloQt: CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o
 HelloQt: CMakeFiles/HelloQt.dir/moc_register.cpp.o
 HelloQt: CMakeFiles/HelloQt.dir/moc_activity.cpp.o
 HelloQt: CMakeFiles/HelloQt.dir/build.make
+HelloQt: libcore.a
 HelloQt: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
 HelloQt: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 HelloQt: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8

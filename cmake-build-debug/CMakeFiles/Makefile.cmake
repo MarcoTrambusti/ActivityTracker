@@ -8,8 +8,13 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
+  "CMakeFiles/3.17.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeSystem.cmake"
+  "../test/CMakeLists.txt"
+  "../test/lib/googletest/CMakeLists.txt"
+  "../test/lib/googletest/cmake/internal_utils.cmake"
+  "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCInformation.cmake"
   "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCXXInformation.cmake"
   "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
   "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCommonLanguageInclude.cmake"
@@ -21,10 +26,19 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/CMakeParseArguments.cmake"
   "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInformation.cmake"
   "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/CheckCSourceCompiles.cmake"
+  "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/CheckIncludeFile.cmake"
+  "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/CheckLibraryExists.cmake"
   "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+  "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-C.cmake"
   "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-CXX.cmake"
   "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU.cmake"
+  "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake"
+  "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageMessage.cmake"
+  "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/FindPythonInterp.cmake"
+  "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/FindThreads.cmake"
   "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/Internal/CMakeCheckCompilerFlag.cmake"
+  "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-C.cmake"
   "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-CXX.cmake"
   "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU.cmake"
   "/home/marco/Documenti/clion-2020.2.3/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux.cmake"
@@ -80,9 +94,16 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/lib/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/HelloQt.dir/DependInfo.cmake"
+  "CMakeFiles/testlib.dir/DependInfo.cmake"
+  "CMakeFiles/ActivityTracker.dir/DependInfo.cmake"
+  "CMakeFiles/core.dir/DependInfo.cmake"
+  "test/CMakeFiles/runActivityTrackerTests.dir/DependInfo.cmake"
+  "test/lib/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "test/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )

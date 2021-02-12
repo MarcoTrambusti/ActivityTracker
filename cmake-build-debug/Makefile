@@ -131,17 +131,82 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named HelloQt
+# Target rules for targets named testlib
 
 # Build rule for target.
-HelloQt: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HelloQt
-.PHONY : HelloQt
+testlib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testlib
+.PHONY : testlib
 
 # fast build rule for target.
-HelloQt/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/build
-.PHONY : HelloQt/fast
+testlib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/build
+.PHONY : testlib/fast
+
+#=============================================================================
+# Target rules for targets named ActivityTracker
+
+# Build rule for target.
+ActivityTracker: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ActivityTracker
+.PHONY : ActivityTracker
+
+# fast build rule for target.
+ActivityTracker/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/build
+.PHONY : ActivityTracker/fast
+
+#=============================================================================
+# Target rules for targets named core
+
+# Build rule for target.
+core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 core
+.PHONY : core
+
+# fast build rule for target.
+core/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/build
+.PHONY : core/fast
+
+#=============================================================================
+# Target rules for targets named runActivityTrackerTests
+
+# Build rule for target.
+runActivityTrackerTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runActivityTrackerTests
+.PHONY : runActivityTrackerTests
+
+# fast build rule for target.
+runActivityTrackerTests/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/runActivityTrackerTests.dir/build.make test/CMakeFiles/runActivityTrackerTests.dir/build
+.PHONY : runActivityTrackerTests/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f test/lib/googletest/CMakeFiles/gtest_main.dir/build.make test/lib/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f test/lib/googletest/CMakeFiles/gtest.dir/build.make test/lib/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
 
 activity.o: activity.cpp.o
 
@@ -149,7 +214,9 @@ activity.o: activity.cpp.o
 
 # target to build an object file
 activity.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/activity.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/activity.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/activity.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/activity.cpp.o
 .PHONY : activity.cpp.o
 
 activity.i: activity.cpp.i
@@ -158,7 +225,9 @@ activity.i: activity.cpp.i
 
 # target to preprocess a source file
 activity.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/activity.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/activity.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/activity.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/activity.cpp.i
 .PHONY : activity.cpp.i
 
 activity.s: activity.cpp.s
@@ -167,7 +236,9 @@ activity.s: activity.cpp.s
 
 # target to generate assembly for a file
 activity.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/activity.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/activity.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/activity.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/activity.cpp.s
 .PHONY : activity.cpp.s
 
 main.o: main.cpp.o
@@ -176,7 +247,9 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -185,7 +258,9 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -194,7 +269,9 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 mainwindow.o: mainwindow.cpp.o
@@ -203,7 +280,9 @@ mainwindow.o: mainwindow.cpp.o
 
 # target to build an object file
 mainwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/mainwindow.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/mainwindow.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/mainwindow.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/mainwindow.cpp.o
 .PHONY : mainwindow.cpp.o
 
 mainwindow.i: mainwindow.cpp.i
@@ -212,7 +291,9 @@ mainwindow.i: mainwindow.cpp.i
 
 # target to preprocess a source file
 mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/mainwindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/mainwindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/mainwindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/mainwindow.cpp.i
 .PHONY : mainwindow.cpp.i
 
 mainwindow.s: mainwindow.cpp.s
@@ -221,7 +302,9 @@ mainwindow.s: mainwindow.cpp.s
 
 # target to generate assembly for a file
 mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/mainwindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/mainwindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/mainwindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
 moc_activity.o: moc_activity.cpp.o
@@ -230,7 +313,8 @@ moc_activity.o: moc_activity.cpp.o
 
 # target to build an object file
 moc_activity.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/moc_activity.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/moc_activity.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/moc_activity.cpp.o
 .PHONY : moc_activity.cpp.o
 
 moc_activity.i: moc_activity.cpp.i
@@ -239,7 +323,8 @@ moc_activity.i: moc_activity.cpp.i
 
 # target to preprocess a source file
 moc_activity.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/moc_activity.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/moc_activity.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/moc_activity.cpp.i
 .PHONY : moc_activity.cpp.i
 
 moc_activity.s: moc_activity.cpp.s
@@ -248,7 +333,8 @@ moc_activity.s: moc_activity.cpp.s
 
 # target to generate assembly for a file
 moc_activity.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/moc_activity.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/moc_activity.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/moc_activity.cpp.s
 .PHONY : moc_activity.cpp.s
 
 moc_mainwindow.o: moc_mainwindow.cpp.o
@@ -257,7 +343,8 @@ moc_mainwindow.o: moc_mainwindow.cpp.o
 
 # target to build an object file
 moc_mainwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/moc_mainwindow.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/moc_mainwindow.cpp.o
 .PHONY : moc_mainwindow.cpp.o
 
 moc_mainwindow.i: moc_mainwindow.cpp.i
@@ -266,7 +353,8 @@ moc_mainwindow.i: moc_mainwindow.cpp.i
 
 # target to preprocess a source file
 moc_mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/moc_mainwindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/moc_mainwindow.cpp.i
 .PHONY : moc_mainwindow.cpp.i
 
 moc_mainwindow.s: moc_mainwindow.cpp.s
@@ -275,7 +363,8 @@ moc_mainwindow.s: moc_mainwindow.cpp.s
 
 # target to generate assembly for a file
 moc_mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/moc_mainwindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/moc_mainwindow.cpp.s
 .PHONY : moc_mainwindow.cpp.s
 
 moc_register.o: moc_register.cpp.o
@@ -284,7 +373,8 @@ moc_register.o: moc_register.cpp.o
 
 # target to build an object file
 moc_register.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/moc_register.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/moc_register.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/moc_register.cpp.o
 .PHONY : moc_register.cpp.o
 
 moc_register.i: moc_register.cpp.i
@@ -293,7 +383,8 @@ moc_register.i: moc_register.cpp.i
 
 # target to preprocess a source file
 moc_register.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/moc_register.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/moc_register.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/moc_register.cpp.i
 .PHONY : moc_register.cpp.i
 
 moc_register.s: moc_register.cpp.s
@@ -302,7 +393,8 @@ moc_register.s: moc_register.cpp.s
 
 # target to generate assembly for a file
 moc_register.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/moc_register.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/moc_register.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/moc_register.cpp.s
 .PHONY : moc_register.cpp.s
 
 register.o: register.cpp.o
@@ -311,7 +403,9 @@ register.o: register.cpp.o
 
 # target to build an object file
 register.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/register.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/register.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/register.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/register.cpp.o
 .PHONY : register.cpp.o
 
 register.i: register.cpp.i
@@ -320,7 +414,9 @@ register.i: register.cpp.i
 
 # target to preprocess a source file
 register.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/register.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/register.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/register.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/register.cpp.i
 .PHONY : register.cpp.i
 
 register.s: register.cpp.s
@@ -329,7 +425,9 @@ register.s: register.cpp.s
 
 # target to generate assembly for a file
 register.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloQt.dir/build.make CMakeFiles/HelloQt.dir/register.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/register.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/register.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/register.cpp.s
 .PHONY : register.cpp.s
 
 # Help Target
@@ -340,7 +438,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... HelloQt"
+	@echo "... ActivityTracker"
+	@echo "... core"
+	@echo "... gtest"
+	@echo "... gtest_main"
+	@echo "... runActivityTrackerTests"
+	@echo "... testlib"
 	@echo "... activity.o"
 	@echo "... activity.i"
 	@echo "... activity.s"

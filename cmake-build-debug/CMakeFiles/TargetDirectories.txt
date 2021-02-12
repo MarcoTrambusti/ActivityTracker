@@ -1,3 +1,12 @@
 /home/marco/ActivityTracker/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/marco/ActivityTracker/cmake-build-debug/CMakeFiles/testlib.dir
+/home/marco/ActivityTracker/cmake-build-debug/CMakeFiles/ActivityTracker.dir
+/home/marco/ActivityTracker/cmake-build-debug/CMakeFiles/core.dir
 /home/marco/ActivityTracker/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/marco/ActivityTracker/cmake-build-debug/CMakeFiles/HelloQt.dir
+/home/marco/ActivityTracker/cmake-build-debug/test/CMakeFiles/rebuild_cache.dir
+/home/marco/ActivityTracker/cmake-build-debug/test/CMakeFiles/edit_cache.dir
+/home/marco/ActivityTracker/cmake-build-debug/test/CMakeFiles/runActivityTrackerTests.dir
+/home/marco/ActivityTracker/cmake-build-debug/test/lib/googletest/CMakeFiles/rebuild_cache.dir
+/home/marco/ActivityTracker/cmake-build-debug/test/lib/googletest/CMakeFiles/edit_cache.dir
+/home/marco/ActivityTracker/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest_main.dir
+/home/marco/ActivityTracker/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest.dir

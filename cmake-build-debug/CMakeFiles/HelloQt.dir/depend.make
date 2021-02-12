@@ -170,6 +170,7 @@ CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/Q
 CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
 CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidgetItem
 CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
+CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem
 CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
 CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
 CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
@@ -188,6 +189,8 @@ CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/q
 CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
 CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
 CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
+CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h
+CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h
 CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
 CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
 CMakeFiles/HelloQt.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
@@ -325,12 +328,13 @@ CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWid
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit
-CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidgetItem
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar
+CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget
+CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTimeEdit
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout
@@ -368,6 +372,8 @@ CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWid
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
+CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h
+CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h
 CMakeFiles/HelloQt.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
@@ -492,6 +498,7 @@ CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/Q
 CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAbstractButton
 CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidgetItem
 CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
+CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem
 CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
 CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
 CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
@@ -508,6 +515,8 @@ CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/Q
 CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
 CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
 CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
+CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h
+CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h
 CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
 CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
 CMakeFiles/HelloQt.dir/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h

@@ -21,6 +21,9 @@ public:
    void save();
     void load();
     QList<Activity*> getListByDate(QDate d);
+
+    const QList<Activity *> &getActivitylist() const;
+
 private:
  QList<Activity*> Activitylist;
 };
