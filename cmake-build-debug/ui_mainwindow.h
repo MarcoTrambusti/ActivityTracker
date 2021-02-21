@@ -22,10 +22,10 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableWidget>
-#include <QtWidgets/QTimeEdit>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include <timeedit.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -41,9 +41,9 @@ public:
     QHBoxLayout *horizontalLayout;
     QLineEdit *lineEdit;
     QLabel *label_start;
-    QTimeEdit *timeEdit_start;
+    TimeEdit *timeEdit_start;
     QLabel *label_end;
-    QTimeEdit *timeEdit_end;
+    TimeEdit *timeEdit_end;
     QPushButton *pushButton;
     QPushButton *modButton;
     QPushButton *delButton;
@@ -214,8 +214,9 @@ public:
 
         horizontalLayout->addWidget(label_start);
 
-        timeEdit_start = new QTimeEdit(centralWidget);
+        timeEdit_start = new TimeEdit(centralWidget);
         timeEdit_start->setObjectName(QString::fromUtf8("timeEdit_start"));
+        timeEdit_start->setCurrentSection(QDateTimeEdit::MinuteSection);
 
         horizontalLayout->addWidget(timeEdit_start);
 
@@ -224,8 +225,10 @@ public:
 
         horizontalLayout->addWidget(label_end);
 
-        timeEdit_end = new QTimeEdit(centralWidget);
+        timeEdit_end = new TimeEdit(centralWidget);
         timeEdit_end->setObjectName(QString::fromUtf8("timeEdit_end"));
+        timeEdit_end->setCorrectionMode(QAbstractSpinBox::CorrectToPreviousValue);
+        timeEdit_end->setCurrentSection(QDateTimeEdit::MinuteSection);
 
         horizontalLayout->addWidget(timeEdit_end);
 

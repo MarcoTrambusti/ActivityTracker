@@ -1,4 +1,3 @@
-#include <iostream>
 #include "register.h"
 
 Register::Register()= default;
@@ -8,8 +7,8 @@ void Register::save() {//save activities on list.txt
     QFile file(filename);
     QTextStream memo(&file);
     if(file.open(QIODevice::WriteOnly)) {
-        for (auto & itr : Activitylist) {
-            memo << itr->getDate().toString("dd.MM.yyyy") << "| " <<itr->getDescription()<<"| "<<itr->getStartTime().toString("HH:mm")<<"| "<<itr->getEndTime().toString("HH:mm")<<"\n";
+        for (auto & itr : ActivityMap) {
+            memo << itr.getDate().toString("dd.MM.yyyy") << "| " <<itr.getDescription()<<"| "<<itr.getStartTime().toString("HH:mm")<<"| "<<itr.getEndTime().toString("HH:mm")<<"\n";
         }
     }
 }
@@ -29,32 +28,22 @@ void Register::load() { //load activities from lists.txt
                 QDate date = QDate::fromString(d, "dd.MM.yyyy");
                 QTime start=QTime::fromString(s,"HH:mm");
                 QTime end=QTime::fromString(e,"HH:mm");
-                Activitylist.push_back(new Activity(a, date,start,end));
+                ActivityMap.insert(date,Activity(a,date,start,end));
             }
         }
     }
 }
 
-QList<Activity *> Register::getListByDate(QDate d) {
-    QList<Activity*> l;
-    for(auto & itr : Activitylist){
-        if(itr->getDate()==d)
-        l.push_back(itr);
-    }
+QList<Activity> Register::getListByDate(QDate d) {
+    QList<Activity> l;
+    l=ActivityMap.values(d);
     return l;
 }
 
-Activity *Register::find(const QString& a, const QDate& d,const QString& s, const QString& e) {
-    for(auto & itr : Activitylist){
-        if(itr->getDate()==d && itr->getDescription()==a && itr->getStartTime().toString("HH:mm")==s && itr->getEndTime().toString("HH:mm")==e)
-            return itr;
-    }
-    return nullptr;
+Activity *Register::find(const QDate& d, const Activity& a) {
+   return &ActivityMap.find(d,a).value();
 }
 
-const QList<Activity *> &Register::getActivitylist() const {
-    return Activitylist;
-}
 
 
 

@@ -680,7 +680,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QTimeEdit" name="timeEdit_start"/>
+         <widget class="TimeEdit" name="timeEdit_start">
+          <property name="currentSection">
+           <enum>QDateTimeEdit::MinuteSection</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QLabel" name="label_end">
@@ -690,7 +694,14 @@
          </widget>
         </item>
         <item>
-         <widget class="QTimeEdit" name="timeEdit_end"/>
+         <widget class="TimeEdit" name="timeEdit_end">
+          <property name="correctionMode">
+           <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+          </property>
+          <property name="currentSection">
+           <enum>QDateTimeEdit::MinuteSection</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QPushButton" name="pushButton">
@@ -758,6 +769,13 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>TimeEdit</class>
+   <extends>QTimeEdit</extends>
+   <header location="global">timeedit.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

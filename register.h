@@ -4,28 +4,28 @@
 #include"activity.h"
 #include <QFile>
 #include <QTextStream>
+#include <memory>
 class Register
 {
 public:
     Register();
-    void addActivity(Activity* a){
-        Activitylist.push_back(a);
-    }
-    void removeActivity(Activity* a){
-        Activitylist.removeOne(a);
-    }
-    void clearList(){
-        Activitylist.clear();
-    }
-    Activity* find(const QString& a,const QDate& d,const QString& s, const QString& e);
-   void save();
-    void load();
-    QList<Activity*> getListByDate(QDate d);
 
-    const QList<Activity *> &getActivitylist() const;
+    void addActivity(const Activity& a){
+        ActivityMap.insert(a.getDate(),a);
+    }
+    void removeActivity(const Activity& a){
+       ActivityMap.erase(ActivityMap.find(a.getDate(),a));
+    }
+    void clearMap(){
+        ActivityMap.clear();
+    }
+    Activity* find(const QDate& d, const Activity& a);
+    void save();
+    void load();
+    QList<Activity> getListByDate(QDate d);
 
 private:
- QList<Activity*> Activitylist;
+    QMultiMap<QDate, Activity> ActivityMap;
 };
 
 #endif // REGISTER_H

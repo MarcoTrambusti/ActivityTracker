@@ -15,13 +15,15 @@ set(project_ui
 set(project_headers
         mainwindow.h
         register.h
-        activity.h)
+        activity.h
+        timeedit.h)
 
 set(project_sources
         main.cpp
         mainwindow.cpp
         register.cpp
-        activity.cpp )
+        activity.cpp
+        timeedit.cpp)
 
 qt5_wrap_ui(project_headers_wrapped ${project_ui})
 qt5_wrap_cpp(project_sources_moc ${project_headers})
@@ -29,7 +31,7 @@ add_library(testlib  ${project_headers} ${project_sources}
         ${project_sources_moc} ${project_headers_wrapped})
 add_executable(${PROJECT_NAME} ${project_headers} ${project_sources}
         ${project_sources_moc} ${project_headers_wrapped})
-add_library(core  ${project_headers} ${project_sources})
+add_library(core  ${project_headers} ${project_sources} timeedit.h)
 target_link_libraries(core
         PUBLIC
         Qt5::Core

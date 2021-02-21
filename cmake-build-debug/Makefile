@@ -397,6 +397,36 @@ moc_register.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/moc_register.cpp.s
 .PHONY : moc_register.cpp.s
 
+moc_timeedit.o: moc_timeedit.cpp.o
+
+.PHONY : moc_timeedit.o
+
+# target to build an object file
+moc_timeedit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/moc_timeedit.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/moc_timeedit.cpp.o
+.PHONY : moc_timeedit.cpp.o
+
+moc_timeedit.i: moc_timeedit.cpp.i
+
+.PHONY : moc_timeedit.i
+
+# target to preprocess a source file
+moc_timeedit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/moc_timeedit.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/moc_timeedit.cpp.i
+.PHONY : moc_timeedit.cpp.i
+
+moc_timeedit.s: moc_timeedit.cpp.s
+
+.PHONY : moc_timeedit.s
+
+# target to generate assembly for a file
+moc_timeedit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/moc_timeedit.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/moc_timeedit.cpp.s
+.PHONY : moc_timeedit.cpp.s
+
 register.o: register.cpp.o
 
 .PHONY : register.o
@@ -430,6 +460,39 @@ register.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/register.cpp.s
 .PHONY : register.cpp.s
 
+timeedit.o: timeedit.cpp.o
+
+.PHONY : timeedit.o
+
+# target to build an object file
+timeedit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/timeedit.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/timeedit.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/timeedit.cpp.o
+.PHONY : timeedit.cpp.o
+
+timeedit.i: timeedit.cpp.i
+
+.PHONY : timeedit.i
+
+# target to preprocess a source file
+timeedit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/timeedit.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/timeedit.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/timeedit.cpp.i
+.PHONY : timeedit.cpp.i
+
+timeedit.s: timeedit.cpp.s
+
+.PHONY : timeedit.s
+
+# target to generate assembly for a file
+timeedit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/timeedit.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ActivityTracker.dir/build.make CMakeFiles/ActivityTracker.dir/timeedit.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/timeedit.cpp.s
+.PHONY : timeedit.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -462,9 +525,15 @@ help:
 	@echo "... moc_register.o"
 	@echo "... moc_register.i"
 	@echo "... moc_register.s"
+	@echo "... moc_timeedit.o"
+	@echo "... moc_timeedit.i"
+	@echo "... moc_timeedit.s"
 	@echo "... register.o"
 	@echo "... register.i"
 	@echo "... register.s"
+	@echo "... timeedit.o"
+	@echo "... timeedit.i"
+	@echo "... timeedit.s"
 .PHONY : help
 
 

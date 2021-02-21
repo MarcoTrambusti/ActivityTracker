@@ -7,6 +7,7 @@
 #include<QTableWidgetItem>
 #include <QFile>
 #include "register.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -16,7 +17,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(Register* r, QWidget *parent = 0);
+    explicit MainWindow();
     ~MainWindow() override;
 
 private slots:
@@ -35,8 +36,12 @@ private slots:
     void on_timeEdit_end_timeChanged(const QTime &time);
 
 private:
-    Register* activityRegister;
+    Register activityRegister;
     Ui::MainWindow *ui;
+    QString descr;
+    QDate datetime;
+    QTime start;
+    QTime end;
 
     void insertActivity(const QString& time, const QString& description);
 
