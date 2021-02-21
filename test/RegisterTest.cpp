@@ -20,7 +20,7 @@ protected:
     }
 };
 TEST_F(RegisterTestFixture, testException){
-  ASSERT_THROW(r.addActivity(Activity(testDescription, QDate::fromString("00.00.0000", "dd.MM.yyyy"), testStart, testEnd)),std::runtime_error);
+    ASSERT_THROW(r.addActivity(Activity(testDescription, QDate::fromString("00.00.0000", "dd.MM.yyyy"), testStart, testEnd)),std::runtime_error);
 }
 TEST_F(RegisterTestFixture,testAdd){
     r.addActivity(a);
@@ -40,7 +40,7 @@ TEST_F(RegisterTestFixture,TestGetByDate){
 
 TEST_F(RegisterTestFixture,TestFind){
     r.addActivity(a);
-        ASSERT_EQ(r.getListByDate(testDate).value(r.getListByDate(testDate).indexOf(a)),*r.find(testDate,a));
+    ASSERT_EQ(r.getListByDate(testDate).value(r.getListByDate(testDate).indexOf(a)),*r.find(testDate,a));
 }
 
 TEST_F(RegisterTestFixture,TestSaveAndLoad){

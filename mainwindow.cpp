@@ -1,12 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QTableWidgetItem>
-#include <iostream>
 #include "register.h"
 
 MainWindow::MainWindow() :ui(new Ui::MainWindow),activityRegister(Register())
 {
-
     ui->setupUi(this);
     activityRegister.load();
     ui->dateEdit->setDate( QDate::currentDate());
@@ -99,19 +97,19 @@ void MainWindow::insertActivity(const QString& time, const QString& description)
 
 void MainWindow::clearInputs(){
     ui->lineEdit->clear();
-  ui->timeEdit_start->setTime(QTime::currentTime());
+    ui->timeEdit_start->setTime(QTime::currentTime());
     ui->timeEdit_end->setTime(QTime::currentTime().addSecs(1800));
     ui->tableWidget->clearSelection();
 }
 
 void MainWindow::on_timeEdit_start_timeChanged(const QTime &time)
 {
-  if(ui->timeEdit_end->time()<ui->timeEdit_start->time().addSecs(1800))//set minimum end time to start time+30 minutes
-       ui->timeEdit_end->setTime(ui->timeEdit_start->time().addSecs(1800));
+    if(ui->timeEdit_end->time()<ui->timeEdit_start->time().addSecs(1800))//set minimum end time to start time+30 minutes
+        ui->timeEdit_end->setTime(ui->timeEdit_start->time().addSecs(1800));
 }
 
 void MainWindow::on_timeEdit_end_timeChanged(const QTime &time)
 {
     if(ui->timeEdit_end->time()<ui->timeEdit_start->time().addSecs(1800))
-       ui->timeEdit_start->setTime(ui->timeEdit_end->time().addSecs(-1800));//set minimum end time to start time+30 minutes
+        ui->timeEdit_start->setTime(ui->timeEdit_end->time().addSecs(-1800));//set minimum end time to start time+30 minutes
 }
